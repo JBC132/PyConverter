@@ -1,8 +1,12 @@
 import PySimpleGUI as sg
 
 layout = [
-    [sg.Input(), sg.Spin(['km to mile', 'kg to pound', 'sec to min']), sg.Button('Convert')],
-    [sg.Text('Output')]
+    [
+        sg.Input(key='-INPUT-'), 
+        sg.Spin(['km to mile', 'kg to pound', 'sec to min'], key='-UNITS-'),
+        sg.Button('Convert', key='-CONVERT-')
+    ],
+    [sg.Text('Output', key='-OUTPUT-')]
 ]
 
 window = sg.Window('Converter', layout)
