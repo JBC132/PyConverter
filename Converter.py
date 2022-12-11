@@ -17,4 +17,11 @@ while True:
     if event == sg.WIN_CLOSED:
         break
 
+    if event == '-CONVERT-':
+        input_value = values['-INPUT-']
+        if input_value.isnumeric():
+            match values['-UNITS-']:
+                case 'km to mile':
+                    
+
 window.close()
