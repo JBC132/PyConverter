@@ -22,6 +22,9 @@ while True:
         if input_value.isnumeric():
             match values['-UNITS-']:
                 case 'km to mile':
-                    
+                    output = round(float(input_value)*0.6214)
+                    output_string = f'{input_value} km are {output} miles.'
+            
+            window['-OUTPUT-'].update(output_string)
 
 window.close()
